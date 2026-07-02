@@ -9,9 +9,9 @@
   <link rel="apple-touch-icon" href="page-assets/apple-touch-icon.png" />
   <style>
     @font-face {
-      font-family: "Qingmei Serif";
-      src: url("page-assets/fonts/qingmei-serif.woff2") format("woff2");
-      font-weight: 200 900;
+      font-family: "Qingmei Display";
+      src: url("page-assets/fonts/qingmei-display.woff") format("woff");
+      font-weight: 400;
       font-style: normal;
       font-display: swap;
     }
@@ -26,8 +26,8 @@
       --blue: #253f5b;
       --green: #536b55;
       --shadow: 0 24px 70px rgba(43, 35, 25, .16);
-      --display: "FZShuTi", "STKaiti", "KaiTi", "Kaiti SC", "Qingmei Serif", "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
-      --serif: "Qingmei Serif", "Noto Serif SC", "Source Han Serif SC", "Songti SC", "STSong", "SimSun", serif;
+      --display: "Qingmei Display", "FZShuTi", "STKaiti", "KaiTi", "Kaiti SC", "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
+      --serif: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "STSong", "SimSun", serif;
       --body: "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Source Han Sans SC", "DengXian", sans-serif;
       --sans: "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Source Han Sans SC", sans-serif;
     }
@@ -240,6 +240,9 @@
       color: var(--muted);
       font-size: 17px;
       line-height: 1.9;
+      text-align: justify;
+      text-align-last: left;
+      text-justify: inter-ideograph;
     }
 
     .photo-grid {
@@ -361,6 +364,9 @@
       color: var(--ink);
       font: 400 18px/2 var(--body);
       text-indent: 2em;
+      text-align: justify;
+      text-align-last: left;
+      text-justify: inter-ideograph;
     }
 
     .closing-mark {
@@ -463,6 +469,9 @@
       font-size: 18px;
       line-height: 2;
       text-indent: 2em;
+      text-align: justify;
+      text-align-last: left;
+      text-justify: inter-ideograph;
     }
 
     .article-section {
@@ -491,6 +500,9 @@
       line-height: 2.05;
       font-weight: 400;
       text-indent: 2em;
+      text-align: justify;
+      text-align-last: left;
+      text-justify: inter-ideograph;
     }
 
     .article-section ul {
@@ -507,6 +519,9 @@
       font-size: 17px;
       line-height: 1.85;
       font-weight: 400;
+      text-align: justify;
+      text-align-last: left;
+      text-justify: inter-ideograph;
     }
 
     .article-section li::before {
@@ -528,18 +543,21 @@
 
     .toc a {
       display: grid;
-      grid-template-columns: 34px 1fr;
-      gap: 8px;
+      grid-template-columns: 38px 1fr;
+      gap: 10px;
       align-items: baseline;
       padding: 8px 0;
       color: var(--muted);
       text-decoration: none;
       border-bottom: 1px solid rgba(37, 33, 29, .08);
-      font-size: 13px;
-      line-height: 1.45;
+      font: 400 18px/1.48 var(--display);
     }
 
-    .toc span { color: var(--red); font-weight: 700; }
+    .toc span {
+      color: var(--red);
+      font: 700 13px/1.2 var(--sans);
+      letter-spacing: .04em;
+    }
 
     .evidence-list {
       display: grid;
@@ -613,7 +631,8 @@
         text-align: center;
       }
       .closing-copy p:not(.section-kicker) {
-        text-align: left;
+        text-align: justify;
+        text-align-last: left;
       }
       .closing-mark {
         justify-content: center;
