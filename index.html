@@ -187,6 +187,7 @@
       backdrop-filter: blur(8px);
       font: 600 13px/1.7 var(--sans);
       color: var(--blue);
+      text-align: center;
     }
 
     .stats-strip {
@@ -294,6 +295,7 @@
       border: 1px solid rgba(244, 239, 228, .25);
       font: 600 12px/1.65 var(--sans);
       backdrop-filter: blur(8px);
+      text-align: center;
     }
 
     .photo-grid figcaption span {
@@ -340,6 +342,7 @@
       background: rgba(244, 239, 228, .9);
       color: var(--blue);
       font: 600 13px/1.7 var(--body);
+      text-align: center;
     }
 
     .closing-copy {
@@ -357,6 +360,7 @@
       margin: 0 0 20px;
       color: var(--ink);
       font: 400 18px/2 var(--body);
+      text-indent: 2em;
     }
 
     .closing-mark {
@@ -458,6 +462,7 @@
       color: var(--blue);
       font-size: 18px;
       line-height: 2;
+      text-indent: 2em;
     }
 
     .article-section {
@@ -485,6 +490,7 @@
       font-size: 18px;
       line-height: 2.05;
       font-weight: 400;
+      text-indent: 2em;
     }
 
     .article-section ul {
@@ -652,14 +658,15 @@
         min-height: 310px;
       }
       .photo-grid figcaption {
-        position: static;
-        color: var(--ink);
-        background: rgba(255, 255, 255, .42);
-        border: 0;
-        border-top: 1px solid var(--line);
-        backdrop-filter: none;
+        left: 12px;
+        right: 12px;
+        bottom: 12px;
+        color: var(--paper);
+        background: rgba(37, 33, 29, .72);
+        border: 1px solid rgba(244, 239, 228, .25);
+        backdrop-filter: blur(8px);
       }
-      .photo-grid figcaption span { color: var(--red); }
+      .photo-grid figcaption span { color: #fff9ef; }
       .closing-band {
         padding: 40px 18px 70px;
       }
@@ -694,7 +701,7 @@
         </div>
       </div>
       <figure class="visual-card" aria-label="校园塔楼素材">
-        <img src="page-assets/hero-pagoda.jpg" alt="裁切后的校园塔楼海报素材，未包含可识别人脸" />
+        <img src="page-assets/hero-pagoda.jpg" alt="裁切后的校园塔楼海报素材，未包含可识别人脸" decoding="async" sizes="(max-width: 980px) 100vw, 42vw" srcset="page-assets/hero-pagoda-640.jpg 640w, page-assets/hero-pagoda-960.jpg 960w, page-assets/hero-pagoda-1280.jpg 1280w" loading="eager" fetchpriority="high" />
         <figcaption class="visual-note">真实青媒素材裁切：保留校园建筑与纸面质感，避开人脸、聊天截图和私人路径。</figcaption>
       </figure>
     </header>
@@ -714,25 +721,25 @@
       </div>
       <div class="photo-grid">
         <figure>
-  <img src="page-assets/photo-field-team.jpg" alt="运动场执行现场" loading="lazy" />
+  <img src="page-assets/photo-field-team.jpg" alt="运动场执行现场" decoding="async" sizes="(max-width: 980px) 100vw, (max-width: 1380px) 50vw, 640px" srcset="page-assets/photo-field-team-640.jpg 640w, page-assets/photo-field-team-960.jpg 960w" loading="lazy" />
   <figcaption>
     <span>运动场执行现场</span>
     运动场上的拍摄组，代表那些需要在现场奔跑、等待、补位的青媒日常。
   </figcaption>
 </figure><figure>
-  <img src="page-assets/photo-room-group.jpg" alt="办公室合照" loading="lazy" />
+  <img src="page-assets/photo-room-group.jpg" alt="办公室合照" decoding="async" sizes="(max-width: 980px) 100vw, (max-width: 1380px) 50vw, 640px" srcset="page-assets/photo-room-group-640.jpg 640w, page-assets/photo-room-group-960.jpg 960w" loading="lazy" />
   <figcaption>
     <span>办公室合照</span>
     办公室里的合照，把“一个人做了很多事”放回到一群人共同工作的空间里。
   </figcaption>
 </figure><figure>
-  <img src="page-assets/photo-room-gesture.jpg" alt="青媒空间里的轻松时刻" loading="lazy" />
+  <img src="page-assets/photo-room-gesture.jpg" alt="青媒空间里的轻松时刻" decoding="async" sizes="(max-width: 980px) 100vw, (max-width: 1380px) 50vw, 640px" srcset="page-assets/photo-room-gesture-640.jpg 640w, page-assets/photo-room-gesture-960.jpg 960w" loading="lazy" />
   <figcaption>
     <span>青媒空间里的轻松时刻</span>
     在正式推送和截止时间之外，也有属于团队内部的玩笑、默契和放松。
   </figcaption>
 </figure><figure>
-  <img src="page-assets/photo-small-team.jpg" alt="小团队合影" loading="lazy" />
+  <img src="page-assets/photo-small-team.jpg" alt="小团队合影" decoding="async" sizes="(max-width: 980px) 100vw, (max-width: 1380px) 50vw, 640px" srcset="page-assets/photo-small-team-640.jpg 640w, page-assets/photo-small-team-960.jpg 960w" loading="lazy" />
   <figcaption>
     <span>小团队合影</span>
     更近的一张小团队照片，像一次阶段工作的收束，也像交接前的留影。
@@ -967,7 +974,7 @@
         </div>
       </div>
       <figure class="closing-photo">
-        <img src="page-assets/photo-field-team.jpg" alt="运动场执行现场合影" loading="lazy" />
+        <img src="page-assets/photo-field-team.jpg" alt="运动场执行现场合影" decoding="async" sizes="(max-width: 1180px) 100vw, 760px" srcset="page-assets/photo-field-team-640.jpg 640w, page-assets/photo-field-team-960.jpg 960w" loading="lazy" />
         <figcaption>现场留到最后：不是为了把结尾做重，而是让这篇文字回到它真正发生过的地方。</figcaption>
       </figure>
     </section>
