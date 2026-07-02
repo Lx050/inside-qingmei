@@ -303,6 +303,75 @@
       font-size: 13px;
     }
 
+    .closing-band {
+      display: grid;
+      grid-template-columns: minmax(320px, .92fr) minmax(0, .8fr);
+      gap: clamp(28px, 5vw, 78px);
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: clamp(20px, 4vw, 56px) clamp(22px, 5vw, 72px) clamp(68px, 8vw, 120px);
+      align-items: end;
+      border-top: 1px solid var(--line);
+    }
+
+    .closing-photo {
+      margin: 0;
+      position: relative;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, .3);
+      box-shadow: var(--shadow);
+    }
+
+    .closing-photo img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+    }
+
+    .closing-photo figcaption {
+      position: absolute;
+      left: 22px;
+      right: 22px;
+      bottom: 20px;
+      padding: 12px 14px;
+      background: rgba(244, 239, 228, .9);
+      color: var(--blue);
+      font: 600 13px/1.7 var(--body);
+    }
+
+    .closing-copy {
+      max-width: 560px;
+      padding: 0 0 10px;
+    }
+
+    .closing-copy h2 {
+      margin-bottom: 26px;
+    }
+
+    .closing-copy p:not(.section-kicker) {
+      margin: 0 0 20px;
+      color: var(--ink);
+      font: 400 18px/2 var(--body);
+    }
+
+    .closing-mark {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 34px;
+      color: var(--red);
+      font: 700 12px/1 var(--sans);
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .closing-mark span {
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      background: rgba(255, 255, 255, .28);
+    }
+
     .reading-index {
       display: grid;
       grid-template-columns: minmax(0, 1.25fr) minmax(280px, .55fr);
@@ -559,6 +628,21 @@
         backdrop-filter: none;
       }
       .photo-grid figcaption span { color: var(--red); }
+      .closing-band {
+        grid-template-columns: 1fr;
+        padding: 40px 18px 70px;
+      }
+      .closing-photo { order: 2; }
+      .closing-copy { order: 1; }
+      .closing-copy p:not(.section-kicker) {
+        font-size: 16px;
+        line-height: 1.95;
+      }
+      .closing-photo figcaption {
+        position: static;
+        background: transparent;
+        padding: 14px 16px 16px;
+      }
     }
   </style>
 </head>
@@ -843,6 +927,24 @@
 </section>
       </article>
     </main>
+
+    <section class="closing-band" aria-label="文章尾声">
+      <figure class="closing-photo">
+        <img src="page-assets/photo-field-team.jpg" alt="运动场执行现场合影" loading="lazy" />
+        <figcaption>现场留到最后：不是为了把结尾做重，而是让这篇文字回到它真正发生过的地方。</figcaption>
+      </figure>
+      <div class="closing-copy">
+        <p class="section-kicker">AFTERWORD</p>
+        <h2>把现场留在最后</h2>
+        <p>交接清单不是句号。真正会留下来的，是下一次有人接手时，还能找到照片、表格、流程、文件名和来龙去脉。</p>
+        <p>我离开青媒，但这些日常还在。它们不需要被写成奖状，也不需要被写成控诉；它们只需要被放在这里，成为后来者可以继续往前走的一点凭据。</p>
+        <div class="closing-mark">
+          <span>梁博星 / Lx</span>
+          <span>2026-07-02</span>
+        </div>
+      </div>
+    </section>
+
   </div>
 </body>
 </html>
