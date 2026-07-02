@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Qing seal icon</title>
+  <desc id="desc">A restrained red seal icon built from geometric strokes that suggest the Chinese character Qing.</desc>
+  <rect width="512" height="512" fill="#f4efe4"/>
+  <path fill="#8e2f28" d="M54 50h404c5 0 8 3 8 8v398c0 5-3 8-8 8H56c-5 0-8-3-8-8V58c0-5 2-8 6-8z"/>
+  <path fill="#7d2924" opacity=".28" d="M83 74h346v14H83zM75 423h360v11H75zM66 98h12v322H66zM432 86h12v338h-12z"/>
+  <path fill="none" stroke="#fff4dd" stroke-width="18" stroke-linecap="square" stroke-linejoin="round" opacity=".92" d="M94 90h324v332H94z"/>
+  <path fill="none" stroke="#fff4dd" stroke-width="30" stroke-linecap="round" stroke-linejoin="round" d="M166 128h180"/>
+  <path fill="none" stroke="#fff4dd" stroke-width="30" stroke-linecap="round" stroke-linejoin="round" d="M196 178h120"/>
+  <path fill="none" stroke="#fff4dd" stroke-width="30" stroke-linecap="round" stroke-linejoin="round" d="M150 228h212"/>
+  <path fill="none" stroke="#fff4dd" stroke-width="30" stroke-linecap="round" stroke-linejoin="round" d="M256 112v132"/>
+  <path fill="none" stroke="#fff4dd" stroke-width="31" stroke-linecap="round" stroke-linejoin="round" d="M178 284h156v128"/>
+  <path fill="none" stroke="#fff4dd" stroke-width="31" stroke-linecap="round" stroke-linejoin="round" d="M178 284v128"/>
+  <path fill="none" stroke="#fff4dd" stroke-width="27" stroke-linecap="round" stroke-linejoin="round" d="M185 332h142"/>
+  <path fill="none" stroke="#fff4dd" stroke-width="27" stroke-linecap="round" stroke-linejoin="round" d="M185 378h142"/>
+  <path fill="#f4efe4" opacity=".16" d="M44 51h64v11H44zM414 450h54v14h-54zM48 339h12v56H48zM457 63h10v64h-10z"/>
+</svg>
