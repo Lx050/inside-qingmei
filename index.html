@@ -304,14 +304,20 @@
     }
 
     .closing-band {
-      max-width: 1120px;
+      display: grid;
+      grid-template-columns: minmax(0, .92fr) minmax(360px, .78fr);
+      gap: clamp(28px, 5vw, 78px);
+      max-width: 1320px;
       margin: 0 auto;
       padding: clamp(20px, 4vw, 56px) clamp(22px, 5vw, 72px) clamp(68px, 8vw, 120px);
+      align-items: end;
       border-top: 1px solid var(--line);
     }
 
     .closing-photo {
-      margin: clamp(32px, 5vw, 66px) 0 0;
+      grid-column: 1;
+      grid-row: 1;
+      margin: 0;
       position: relative;
       border: 1px solid var(--line);
       background: rgba(255, 255, 255, .3);
@@ -321,22 +327,26 @@
     .closing-photo img {
       display: block;
       width: 100%;
-      aspect-ratio: 16 / 8.8;
+      aspect-ratio: 16 / 10;
       object-fit: cover;
     }
 
     .closing-photo figcaption {
-      padding: 14px 18px 16px;
-      border-top: 1px solid var(--line);
-      background: rgba(255, 255, 255, .36);
+      position: absolute;
+      left: 22px;
+      right: 22px;
+      bottom: 20px;
+      padding: 12px 14px;
+      background: rgba(244, 239, 228, .9);
       color: var(--blue);
       font: 600 13px/1.7 var(--body);
     }
 
     .closing-copy {
-      max-width: 760px;
-      margin: 0 auto;
-      text-align: center;
+      grid-column: 2;
+      grid-row: 1;
+      max-width: 560px;
+      padding: 0 0 10px;
     }
 
     .closing-copy h2 {
@@ -347,11 +357,9 @@
       margin: 0 0 20px;
       color: var(--ink);
       font: 400 18px/2 var(--body);
-      text-align: left;
     }
 
     .closing-mark {
-      justify-content: center;
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
@@ -584,6 +592,34 @@
       .photo-grid figure:nth-child(4) {
         grid-column: 1 / -1;
         min-height: 420px;
+      }
+    }
+
+    @media (max-width: 1180px) {
+      .closing-band {
+        display: block;
+        max-width: 980px;
+      }
+      .closing-copy {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+      }
+      .closing-copy p:not(.section-kicker) {
+        text-align: left;
+      }
+      .closing-mark {
+        justify-content: center;
+      }
+      .closing-photo {
+        margin: clamp(32px, 5vw, 66px) 0 0;
+      }
+      .closing-photo figcaption {
+        position: static;
+        padding: 14px 18px 16px;
+        border-top: 1px solid var(--line);
+        background: rgba(255, 255, 255, .36);
       }
     }
 
@@ -920,10 +956,6 @@
     </main>
 
     <section class="closing-band" aria-label="文章尾声">
-      <figure class="closing-photo">
-        <img src="page-assets/photo-field-team.jpg" alt="运动场执行现场合影" loading="lazy" />
-        <figcaption>现场留到最后：不是为了把结尾做重，而是让这篇文字回到它真正发生过的地方。</figcaption>
-      </figure>
       <div class="closing-copy">
         <p class="section-kicker">AFTERWORD</p>
         <h2>把现场留在最后</h2>
@@ -934,6 +966,10 @@
           <span>2026-07-02</span>
         </div>
       </div>
+      <figure class="closing-photo">
+        <img src="page-assets/photo-field-team.jpg" alt="运动场执行现场合影" loading="lazy" />
+        <figcaption>现场留到最后：不是为了把结尾做重，而是让这篇文字回到它真正发生过的地方。</figcaption>
+      </figure>
     </section>
 
   </div>
