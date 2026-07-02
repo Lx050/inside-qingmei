@@ -304,18 +304,14 @@
     }
 
     .closing-band {
-      display: grid;
-      grid-template-columns: minmax(320px, .92fr) minmax(0, .8fr);
-      gap: clamp(28px, 5vw, 78px);
-      max-width: 1320px;
+      max-width: 1120px;
       margin: 0 auto;
       padding: clamp(20px, 4vw, 56px) clamp(22px, 5vw, 72px) clamp(68px, 8vw, 120px);
-      align-items: end;
       border-top: 1px solid var(--line);
     }
 
     .closing-photo {
-      margin: 0;
+      margin: clamp(32px, 5vw, 66px) 0 0;
       position: relative;
       border: 1px solid var(--line);
       background: rgba(255, 255, 255, .3);
@@ -325,24 +321,22 @@
     .closing-photo img {
       display: block;
       width: 100%;
-      aspect-ratio: 16 / 10;
+      aspect-ratio: 16 / 8.8;
       object-fit: cover;
     }
 
     .closing-photo figcaption {
-      position: absolute;
-      left: 22px;
-      right: 22px;
-      bottom: 20px;
-      padding: 12px 14px;
-      background: rgba(244, 239, 228, .9);
+      padding: 14px 18px 16px;
+      border-top: 1px solid var(--line);
+      background: rgba(255, 255, 255, .36);
       color: var(--blue);
       font: 600 13px/1.7 var(--body);
     }
 
     .closing-copy {
-      max-width: 560px;
-      padding: 0 0 10px;
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
     }
 
     .closing-copy h2 {
@@ -353,9 +347,11 @@
       margin: 0 0 20px;
       color: var(--ink);
       font: 400 18px/2 var(--body);
+      text-align: left;
     }
 
     .closing-mark {
+      justify-content: center;
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
@@ -629,20 +625,15 @@
       }
       .photo-grid figcaption span { color: var(--red); }
       .closing-band {
-        grid-template-columns: 1fr;
         padding: 40px 18px 70px;
       }
-      .closing-photo { order: 2; }
-      .closing-copy { order: 1; }
       .closing-copy p:not(.section-kicker) {
         font-size: 16px;
         line-height: 1.95;
       }
-      .closing-photo figcaption {
-        position: static;
-        background: transparent;
-        padding: 14px 16px 16px;
-      }
+      .closing-photo { margin-top: 30px; }
+      .closing-photo img { aspect-ratio: 4 / 3; }
+      .closing-photo figcaption { padding: 14px 16px 16px; }
     }
   </style>
 </head>
